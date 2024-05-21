@@ -170,11 +170,11 @@ section{
 
 /* PRODUCTS SECTION */
 
-.products .product-txt{
+.product-txt{
     text-align: center;
     
 }
-.products .product-txt h2{
+.product-txt h2{
     font-size: var(--h2-font);
     font-weight: 700;
 }
@@ -272,4 +272,93 @@ section{
     border: 1px solid var(--main-color);
     border-radius: 28px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* FEATURED SECTION */
+#featured{
+    padding-top: 10px;
+}
+.featured-container{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, auto)); 
+    gap: 2rem;
+}
+.featured-box{
+    display: flex;
+    column-gap: 1.5rem;
+    border: 1px solid var(--main-color);
+    box-shadow: -10px 0 5px -5px rgba(0, 0, 0, 0.5);
+    padding: 18px 15px;
+    transition: all .6s ;
+    cursor: pointer;
+}
+.featured-box:hover{
+    transform: translateY(-4px) scale(1.02) ;
+}
+.f-left i{
+    font-size: 33px;
+}
+.f-right h4{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.f-right p{
+    font-size: var(--p-font);
+    font-weight: 400;
+    color: var(--second-color);
+    line-height: 33px;
+}
+
+/* BEST SELLER SECTION */
+.b-seller-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, auto)); 
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+.b-seller-box{
+    position: relative;
+    transition: all .6s ;
+}
+.b-seller-img{
+    overflow: hidden;
+    border-radius: 28px;
+}
+.b-seller-img img{
+    display: block;
+    width: 100%;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+.b-seller-img:hover img{
+    transform: scale(1.05);
+}
+.b-seller-icons{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+.b-seller-icons a{
+    display: block;
+}
+.b-seller-icons i{
+    margin-bottom: 20px;
+    width: 35px;
+    height: 35px;
+    background: var(--text-color);
+    color: var(--bg-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all .6s ;
+}
+.b-seller-box:hover .b-seller-icons i{
+    opacity: 1;
+    transform: rotate3d(0,0,1,360deg)scale(1.03);
 }
